@@ -1,0 +1,8 @@
+https://en.wikipedia.org/wiki/Recurrent_neural_network#Elman_networks_and_Jordan_networks
+https://en.wikipedia.org/wiki/Stock_market_prediction
+http://blog.echen.me/2017/05/30/exploring-lstms/?utm_source=Mailing+list&utm_campaign=479f35fbcc-Kaggle_Newsletter_06-29-2017&utm_medium=email&utm_term=0_f42f9df1e1-479f35fbcc-400671861
+
+################################################# findings
+1. when mun_steps is higher the prediction contains higher frequency components
+2. 
+

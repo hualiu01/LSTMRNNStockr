@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block heads %}
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/amstock.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/dataloader/dataloader.min.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+<style>
+#chartdiv {
+  width : 75%;
+  height  : 500px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="col-md-9">
+    <h1 style="color:#F87431;font-weight:bold;">{{ data['symbol']|tojson }}</h1>
+    <span id="symbol" style="color:green;font-weight:bold;size:h3">Current user is : {{ g.user }}</span>
+    <hr style="background:#F87431; border:0; height:7px" />
+</div>
+
+<div class="col-md-9" id="chartdiv"></div>
+
+<div class="col-md-9">
+    <hr style="background:#F87431; border:0; height:7px" />
+    <h4>Prediction of {{ data['tomorrow_date']|tojson }}:
+    {{ data['tomorrow_prediction']|tojson }}. RMSE: {{ data['RMSE']|tojson }}</p>
+    <hr style="background:#F87431; border:0; height:7px" />
+</div>
+
+<script type="text/javascript">
+// document.getElementById("symbol").innerHTML = "Current symbol: " + {{ data['symbol']|tojson }}  
+var symbol = {{ data['symbol']|tojson }};
+var tomorrow_date = {{ data['tomorrow_date']|tojson }};
+var tomorrow_prediction = {{ data['tomorrow_prediction']|tojson }};
+var RMSE = {{ data['RMSE']|tojson }}
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='./js/index.js') }}?ver=20"> </script>
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang=-"en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"> 
+	<title>stock prediction</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	{% block heads %}
+	{% endblock %}	
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="col-md-12" style="background-color:black;">
+			<header>
+				<a class="navbar-brand" href="{{ url_for('homepage') }}" style="color:#F87431;">Stockr</a>
+				<a class="navbar-brand" href="{{ url_for('signup') }}" style="color:#F87431;">Signup</a>
+				<a class="navbar-brand" href="{{ url_for('login') }}" style="color:#F87431;">Login</a>
+				<a class="navbar-brand" href="{{ url_for('logout') }}" style="color:#F87431;">Logout</a>
+			</header>
+		</div>
+
+		<div class="col-md-12" style="margin-top:150px min-height:100% width=80%">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+  			<!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+  			{% if messages %}
+    			{% for category, message in messages %}
+				    <div class="alert alert-{{ category }} alert-dismissable">
+					    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					    {{ message }}
+      				</div>
+    			{% endfor %}
+  			{% endif %}
+		{% endwith %}
+
+		{% block content %}{% endblock %}
+		</div>
+	</div>
+</body>
+</html>

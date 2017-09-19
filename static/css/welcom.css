@@ -1,0 +1,72 @@
+body{
+	padding:50px 0px 0px 0px;
+	z-index:0;
+}
+
+.row-header {
+	margin:0 auto;
+	padding:0 auto;
+}
+
+.row-header .col-xs-12 .form-horizontal{
+	padding:0 300px;
+}
+
+.row-header .col-xs-12 form{
+	padding:0 300px;
+}
+
+.row-content {
+	margin:0 auto;
+	padding:50px 0 50px 0;
+	border-bottom:1px ridge;
+	min-height: 400px;
+}
+
+.row-footer {
+	background-color:#AfAfAf;
+	margin:0 auto;
+	padding:20px 0 20px 0;
+}
+
+.jumbotron {
+	padding:70px 30px 70px 30px;
+	margin:0 auto;
+	background-color:#7986CB; 
+	color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+.navbar-inverse{
+	background: #303F9F;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+	color: #fff;
+	background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+	color: #fff;
+	background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+	background-color: #303F9F;
+	color:#eeeeee;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
+	color:#000000;
+}
+

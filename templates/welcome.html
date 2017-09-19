@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block heads %}
+{{super()}}
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<header class="col-md-12 jumbotron" style = "margin-top:100px; color:#428bca; background-color:#FFFFFF;">
+    <div class="container">
+        <div class="row row-header">
+            <div class = "col-xs-12" >
+                <h1 class="text-center" style = "font-family: 'Righteous', cursive; font-size: 100px; color:#F87431;"">Stockr</h1>
+                <div>
+                    <form class = "form-horizontal form-group" method="post" role = "form" action="{{ url_for('homepage') }}">
+                    <div class="col-sm-12">
+                         <input type="text" class="form-control" placeholder="Stock Symbol" name = "symbol" style="height: 40px;"> 
+                    </div>
+                </form>
+				</div>	
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock %}

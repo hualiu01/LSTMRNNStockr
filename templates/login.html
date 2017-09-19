@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block heads %}
+{{super()}}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% if error %}
+    <p class="error" ><strong>Error: </strong> {{ error }}</p>
+  {% endif %}
+  {% from "__formhelpers.html" import render_field %}
+		<form method=post>
+  			<dl>
+			    {{ render_field(form.username) }}
+			    {{ render_field(form.password) }}
+  			</dl>
+  			<p><input type=submit value=Login></p>
+		</form>
+</div> 
+
+{% endblock %}
