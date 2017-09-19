@@ -14,7 +14,7 @@ Note: Please activate tensorflow virtual env first.
 
 To runthe experiment on LSTM structures:
 > cd ./model
-> python experiment
+> python experiment.py
 
 To run the web app, first change back to the root
 > python app.py
