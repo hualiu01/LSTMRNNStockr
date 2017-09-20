@@ -14,14 +14,15 @@ Note: Please activate tensorflow virtual env first.
 
 To runthe experiment on LSTM structures:
 > cd ./model
+
 > python experiment.py
 
 To run the web app, first change back to the root
 > python app.py
 
 # Paper & vedio demo
-* paper: 
-* vedio demo: 
+* paper: https://github.com/hualiu01/LSTMRNNStockr/blob/master/paper.pdf
+* YouTube vedio demo: https://www.youtube.com/watch?v=haou7Se-RIs&feature=youtu.be
 
 
 
